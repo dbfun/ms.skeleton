@@ -37,7 +37,7 @@ function installApp {
             cloneRepo
         ;;
         laravel-app)
-            REPO="https://github.com/dbfun/laravel-app.git"
+            REPO="https://github.com/dbfun/ms.laravel-app.git"
             cloneRepo
         ;;
         *)
