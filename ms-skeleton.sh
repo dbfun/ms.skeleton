@@ -25,18 +25,19 @@ function cloneRepo {
     if [[ $? != 0 ]]; then
         exit 1
     fi
-    rm -rf ./.git
-    git init
+    cp ./env.dist ./.env
+#    rm -rf ./.git
+#    git init
 }
 
 function installApp {
     case "$DOCKER_BUNDLE" in
         openresty-app)
-            REPO="$SKEL_SRC/.repo/openresty-app/.git"
+            REPO="$SKEL_SRC/.repo/openresty-app.git"
             cloneRepo
         ;;
         laravel-app)
-            REPO="$SKEL_SRC/.repo/laravel-app/.git"
+            REPO="https://github.com/dbfun/ms.openresty-app.git"
             cloneRepo
         ;;
         *)
