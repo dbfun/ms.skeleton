@@ -33,11 +33,11 @@ function cloneRepo {
 function installApp {
     case "$DOCKER_BUNDLE" in
         openresty-app)
-            REPO="$SKEL_SRC/.repo/openresty-app.git"
+            REPO="https://github.com/dbfun/ms.openresty-app.git"
             cloneRepo
         ;;
         laravel-app)
-            REPO="https://github.com/dbfun/ms.openresty-app.git"
+            REPO="https://github.com/dbfun/laravel-app.git"
             cloneRepo
         ;;
         *)
